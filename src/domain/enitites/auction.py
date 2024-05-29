@@ -1,18 +1,11 @@
-"""
-src/domain/enitites/auction.py
-Define enitites Auction
-"""
+from typing import List
+from datetime import date
+from uuid import UUID, uuid4
+from dataclasses import dataclass, field
 
-try:
-    from datetime import datetime, date
-    from uuid import UUID, uuid4
-    from dataclasses import dataclass, field
-
-    from src.domain.enitites.bid import Bid
-    from src.domain.enitites.item import Item
-    from src.domain.enitites.value_objects import Price
-except ImportError as err:
-    raise ImportError(str(err))
+from src.domain.enitites.bid import Bid
+from src.domain.enitites.item import Item
+from src.domain.value_objects.price import Price
 
 
 @dataclass
@@ -22,9 +15,8 @@ class Auction:
     start_date: date
     end_date: date
     start_price: Price
-    bids: list[Bid] = field(default_factory=list)
+    bids: List[Bid] = field(default_factory=list)
     id: UUID = field(default_factory=uuid4)
-    created_at: datetime = field(default_factory=datetime.now())
 
     @property
     def is_active(self) -> bool:

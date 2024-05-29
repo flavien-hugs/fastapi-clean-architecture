@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Poetry (ricva-api)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (ricva-api)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (clean-archi-fastapi)" project-jdk-type="Python SDK" />
 </project>

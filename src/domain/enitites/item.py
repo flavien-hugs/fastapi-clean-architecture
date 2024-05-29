@@ -1,13 +1,5 @@
-"""
-src/domain/enitites/item.py
-Define enitites Item
-"""
-
-try:
-    from uuid import UUID, uuid4
-    from dataclasses import dataclass, field
-except ImportError as err:
-    raise ImportError(str(err))
+from uuid import UUID, uuid4
+from dataclasses import dataclass, field
 
 
 @dataclass
