@@ -3,7 +3,7 @@ import pytest
 
 from datetime import date, timedelta
 
-from src.adapters.repositories.auction.in_memory_repository import (
+from src.adapters.repositories.auction.in_memory import (
     InMemoryAuctionRepository,
 )
 from src.ports.repositories.auction import AuctionRepository

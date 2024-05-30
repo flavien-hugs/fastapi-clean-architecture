@@ -25,6 +25,7 @@ pytest = "^8.2.1"
 mypy = "^1.10.0"
 pytest-asyncio = "^0.23.7"
 mongomock-motor = "^0.0.29"
+ruff = "^0.4.6"
 
 [tool.black]
 line-length = 113
