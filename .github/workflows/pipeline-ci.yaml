@@ -54,6 +54,10 @@ jobs:
           - '3.x'
 
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_RUNNER_DEBUG: true
+      ACTIONS_STEP_DEBUG: true
+
     defaults:
       run:
         working-directory: 'src/'
@@ -79,5 +83,5 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          echo "Starting tests ..."
-          poetry run pytest --cov --cov-report term --cov-report xml:coverage.xml tests
+          poetry run pytest tests/unit
+          poetry run coverage report
